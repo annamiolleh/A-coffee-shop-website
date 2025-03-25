@@ -1,0 +1,121 @@
+.select {
+    overflow: hidden;
+    margin-top: 100px;
+    &__products {
+        display: flex;
+        flex-direction: row;
+        column-gap: 72px;
+        h1 {
+            text-align: center;
+        }
+        p {
+            flex: 0 1 36%;
+            align-self: center;
+        }
+    }
+    @media (max-width: 1070.98px) {
+        &__products {
+            p {
+                flex: 0 1 100%;
+            }
+        }   
+    }
+    @media (max-width: 990.98px) {
+        &__products {
+            flex-direction: column;
+            row-gap: 36px;
+        }
+        h1 {
+            text-align: start;
+            font-size: 60px;
+        }
+        p {
+            font-size: 14px;
+            // align-self: flex-start;
+        }
+        .slider-select {
+            &__wrap {
+                margin-top: 40px;
+            }
+            &__item {
+                min-height: 360px;
+                max-width: 180px;
+                &:hover::before {
+                    left: -40px;
+                    height: 430px;
+                }
+            }
+            &__pic {
+                height: 250px;
+                &::before {
+                    width: 200px;
+                    height: 200px;
+                }
+            }
+            &__title {
+                font-size: 20px;
+                &::before {
+                    left: -50px;
+                }
+
+            }
+            &__price {
+                font-size: 20px;
+            }
+
+        }
+        .custom-prev, .custom-next {
+            width: 55px;
+            height: 55px;
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+        }
+        .custom-prev {
+            left: -5%;
+        }
+        .custom-next {
+            right: -5%;
+        }
+    }
+    @media (max-width: 767.98px) {
+        margin-top: 60px;
+        .slider-select {
+            &__item {
+                margin: 0 auto;
+                max-width: 230px;
+                &:hover::before {
+                    left: 45px;
+                    height: 360px;
+                }
+            }
+        }
+        .custom-next {
+            right: -8%;
+        }
+    }
+    @media (max-width: 450.98px) {
+        .custom-prev {
+            left: -12%;
+        }
+        .custom-next {
+            right: -12%;
+        }
+        &__products {
+            h1 {
+                font-size: 48px;
+            }
+            p {
+                font-size: 12px;
+            }
+        }
+    }
+    @media (max-width: 375.98px) {
+        .slider-select {
+            &__item {
+                max-width: 150px; 
+            }
+    }
+    }
+}

@@ -1,0 +1,24 @@
+h1 {
+    position: relative;
+    font-size: 80px;
+    color: #FFFFFF;
+    line-height: 110%;
+    span.highlight {
+        padding-left: 20px;
+        background: linear-gradient(to right, #35C66B 0%, #237249 100%);
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+    }
+    &::before {
+        content: '';
+        position: absolute;
+        background-image: url('../../../img/main/Ellipse 3.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 324px;
+        height: 324px;
+        top: 0px;
+        left:200px;
+        z-index: -1;
+    }
+}

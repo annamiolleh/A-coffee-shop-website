@@ -1,0 +1,17 @@
+.counter {
+    display: flex;
+    flex-direction: row;
+    column-gap: 50px;
+    padding-top: 55px;
+    &__value {
+        font-size: 63px;
+        color: #FFFFFF;
+        line-height: 110%;
+        span {
+            color: #2B9758;
+        }
+    }
+    &__title {
+        line-height: 145%;
+    }
+}

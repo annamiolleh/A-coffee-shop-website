@@ -1,0 +1,133 @@
+.slider-select {
+    // overflow: hidden;
+    &__wrap {
+        margin-top: 70px;
+        position: relative;
+    }
+    &__swiper {
+        position: relative;
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        border: 1px solid transparent;
+        border-radius: 29px;
+        background: linear-gradient(#121517, #121517 0) padding-box,
+        linear-gradient(135deg, rgb(217, 217, 217), rgb(23, 30, 36) 50%, rgb(217, 217, 217)) border-box;
+        padding: 0px 30px 30px 30px;
+        min-height: 542px;
+        max-width: 277px;
+        &:hover {
+            background: linear-gradient(#121517, #121517 0) padding-box,
+                linear-gradient(135deg, rgb(53, 198, 107), rgb(35, 114, 73) 50%, rgb(53, 198, 107)) border-box;
+        }
+        &:hover::before{
+            content: '';
+            position: absolute;
+            background-image: url(../../img/select/shade.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            left: 22px;
+            top: 85px;
+            width: 290px;
+            height: 500px;
+        }
+    }
+    &__pic {
+        position: relative;
+        // width: 180px;
+        height: 400px;
+        img {
+            // width: 100%;
+            height: 100%;
+            display: block;
+            position: relative;
+            z-index: 1;
+        }
+        
+        &::before {
+            content: '';
+            position: absolute;
+            background-image: url(../../img/select/ellipse.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            top: 50%;
+            left: 60%;
+            transform: translate(-50%, -50%);
+            width: 300px;
+            height: 300px;
+        }
+    }
+    &__title {
+        position: relative;
+        font-size: 32px;
+        margin-bottom: 20px;
+        line-height: 1.6;
+        &::before {
+            content: '';
+            position: absolute;
+            background-image: url(../../img/select/shadeText.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            left: 50px;
+            top: -70px;
+            width: 266px;
+            height: 229px;     
+        }    
+        &:hover::before{
+            display: none;
+        }
+    }
+    &__text {
+        font-size: 20px;
+        margin-bottom: 20px;
+
+    }
+    &__details {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    &__price {
+        font-size: 32px;
+    }
+}
+.button-wrap {
+    position: absolute;
+    display: flex;
+    
+    top: 50%;
+    left: 50%;
+}
+.custom-prev,
+.custom-next {
+    background-color: #121517;
+    position: absolute;
+    cursor: pointer;
+    z-index: 10;
+    border: none;
+}
+.custom-prev {
+    position: absolute;
+    top: 50%;
+    left: -7%;
+    transform: translateX(-50%);
+    img {
+        transform: rotate(180deg);
+    }
+}
+.custom-next {
+    position: absolute;
+    top: 50%;
+    right: -7%;
+    transform: translateX(50%);
+}
+.swiper-button-disabled {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s ease-in;
+  }
