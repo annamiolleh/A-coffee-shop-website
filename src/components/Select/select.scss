@@ -115,7 +115,10 @@
         .slider-select {
             &__item {
                 max-width: 150px; 
+                &:hover::before {
+                    left: -5px;
             }
+        }
     }
     }
 }

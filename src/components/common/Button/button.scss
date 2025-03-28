@@ -1,5 +1,5 @@
 .btn{
-    display: block;
+    display: inline-flex;
     line-height: 1.4;
     color: #FFFFFF;
     padding: 20px 70px;
@@ -9,4 +9,11 @@
     font-size: 24px;
     font-family: 'Montserrat', sans-serif;
     cursor: pointer;
+    transition: all 0.5s ease-in;
+    @media (any-hover: hover) {    
+        &:hover {
+            box-shadow: 0px 0px 5px 5px rgba(255, 255, 255, 0.2);
+            
+        }
+      }
 }

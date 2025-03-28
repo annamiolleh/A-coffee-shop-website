@@ -7,7 +7,7 @@ import Title from '../common/Title/Title';
 class Contact extends React.Component{
     render() {
         return (
-           <section className='contact'>
+           <section id='contacts' className='contact'>
                 <div className='contact__container'>
                     <div className='contact__pic'>
                         <img src={shop1} alt='A coffee shop'></img>

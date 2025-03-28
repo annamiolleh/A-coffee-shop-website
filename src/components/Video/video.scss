@@ -9,12 +9,47 @@
     align-items: center;
     z-index: 1000;
     
-    &__video {
+    &__video, &__thumbnail {
         width: 100%;
         max-width: 900px;
         height: 500px;
         transform: translate();
         transition: all 1s ease;
+    }
+    &__thumbnail {
+      position: relative;
+      img {
+        width: 100%;
+        display: block;
+      }
+      button{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: block;
+        padding: 30px 30px;
+        background-image: linear-gradient(to right, #35C66B 0%, #237249 100%);
+        border-radius: 50%;
+        border: none;
+        cursor: pointer;
+          img {
+            width: 20px;
+            height: 23px;
+            padding-left: 10%;
+          }      
+      }
+    }
+    @media (any-hover: hover) {
+      &__thumbnail{
+        button {
+          transition: all 0.5s ease-in;
+          &:hover {
+            box-shadow: 0px 0px 10px 10px rgba(255, 255, 255, 0.5);
+            
+          }
+        }
+      }  
     }
     &__content {
     position: relative;
@@ -28,8 +63,8 @@
     }
     &__close-btn {
       position: absolute;
-      top: 10px;
-      right: 10px;
+      top: 0px;
+      right: 0px;
       background: none;
       border: none;
       font-size: 24px;
@@ -44,13 +79,13 @@
       background-color: rgba(0, 0, 0, 0.8);
     }
     @media (max-width: 1023.98px) {
-      &__video {
+      &__video, &__thumbnail {
         height: 400px;
-        max-width: 700px;
+        max-width: 760px;
       }
     }
     @media (max-width: 768.98px) {
-      &__video {
+      &__video, &__thumbnail {
         height: 350px;
       }
       
@@ -61,15 +96,6 @@
       display: flex;
       column-gap: 13px;
       align-items: center;
-      line-height: 1.4;
-      color: #FFFFFF;
-      padding: 20px 70px;
-      background-image: linear-gradient(to right, #35C66B 0%, #237249 100%);
-      border-radius: 83px;
-      border: none;
-      font-size: 24px;
-      font-family: 'Montserrat', sans-serif;
-      cursor: pointer;
       span {
         display: block;
         background-image: url(../../img/about/play.png);
@@ -79,7 +105,7 @@
         height: 20px;     
     }
     } 
-    &__video {
+    &__video, &__thumbnail {
       display: flex;
       justify-content: center;
       margin-top: 15%;

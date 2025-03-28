@@ -5,6 +5,7 @@ import About from './components/About/About.js';
 import Select from './components/Select/Select.js';
 import Contact from './components/Contact/Contact.js';
 import Events from './components/Events/Events.js';
+import Footer from './components/Footer/Footer.js';
 
 class App extends React.Component { 
      render() {
@@ -16,6 +17,7 @@ class App extends React.Component {
                 <Select />
                 <Events />
                 <Contact />
+                <Footer />
             </>
         )
      }

@@ -73,6 +73,13 @@
             font-size: 32px;
             color: #FFFFFF;
             line-height: 1.4;
+            transition: all 0.3s ease-in;
+            @media (any-hover: hover) {    
+                &:hover {
+                    color: #237249;
+                    
+                }
+              }
         }
     }
     &__item {
@@ -134,6 +141,7 @@
         }  
     }
     @media (max-width: 767.98px) {
+        margin-bottom: 60px;
         &__container {
             flex-direction: column;
             &::before {

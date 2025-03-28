@@ -1,6 +1,7 @@
 import React from 'react';
 import './main.scss';
 import { motion } from 'framer-motion';
+import { Link } from 'react-scroll';
 import Title from '../common/Title/Title';
 import Counter from '../Counter/Counter';
 import CardList from '../CardList/CardList';
@@ -20,8 +21,14 @@ class Main extends React.Component{
                             <p>Have time to buy the most harmonious drinks in the<br />
                             new Starbucks coffee and don't forget about the discount!</p>
                             <div className='main__btns'>
-                                <a href='#select' alt='Choose your coffee' className="btn" >Select a coffee</a>
-                                <a href='#about' alt='Get more info'>More</a>
+                                {/* <a href='#select' alt='Choose your coffee' className="btn" >Select a coffee</a> */}
+                                <Link to="select" alt='Choose your coffee' className="btn" smooth={true} duration={900}>
+                                    Select a coffee
+                                </Link>
+                                {/* <a href='#about' alt='Get more info'>More</a> */}
+                                <Link to="about" alt='Get more info' smooth={true} duration={900}>
+                                    More
+                                </Link>
                             </div>
                             <Counter />
                         </div>

@@ -40,6 +40,14 @@
             text-align: center;
             background: linear-gradient(#121517, #121517 0) padding-box,
             linear-gradient(to bottom, rgb(217, 217, 217), rgb(23, 30, 36)) border-box;
+            cursor: pointer;
+            transition: all 0.5s ease-in;
+            @media (any-hover: hover) {    
+                &:hover {
+                    box-shadow: 0px 0px 5px 5px rgba(255, 255, 255, 0.2);
+                    
+                }
+            }
             }
         }
     &__pic { 

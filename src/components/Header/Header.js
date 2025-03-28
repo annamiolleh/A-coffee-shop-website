@@ -1,5 +1,6 @@
 import React from 'react';
 import './header.scss';
+import { Link } from 'react-scroll';
 import logo from '../../img/logo.svg';
 
 class Header extends React.Component {
@@ -40,31 +41,50 @@ class Header extends React.Component {
     return (
       <header className="header">
         <div className="header__container container-header">
-          <a href="#main" className="logo">
+          {/* <a href="#main" className="logo">
             <img src={logo} alt="Logo" />
-          </a>
-          <button
-            className={`header__button ${this.state.isMenuOpen ? 'active' : ''}`}
-            onClick={this.toggleMenu}
-          >
-            <span></span>
-          </button>
+          </a> */}
+          <Link to="main" className="logo" onClick={this.handleMenuItemClick} smooth={true} duration={900}>
+            <img src={logo} alt="Logo" />
+          </Link>
+          <div className='header__button-wrap'>
+            <button
+              className={`header__button ${this.state.isMenuOpen ? 'active' : ''}`}
+              onClick={this.toggleMenu}
+            >
+              <span></span>
+            </button>
+          </div>
           <nav className={`header__nav ${this.state.isMenuOpen ? 'open' : ''}`}>
             <ul className="header__list">
               <li className="header__elem">
-                <a href="#main" onClick={this.handleMenuItemClick}>
+                {/* <a href="#main" onClick={this.handleMenuItemClick}>
                   Home
-                </a>
+                </a> */}
+                <Link to="main" onClick={this.handleMenuItemClick} smooth={true} duration={900}>
+                  Home
+                </Link>
               </li>
               <li className="header__elem">
-                <a href="#select" onClick={this.handleMenuItemClick}>
+                {/* <a href="#select" onClick={this.handleMenuItemClick}>
                   Select
-                </a>
+                </a> */}
+                <Link to="select" onClick={this.handleMenuItemClick} smooth={true} duration={900}>
+                  Select
+                </Link>
               </li>
               <li className="header__elem">
-                <a href="#events" onClick={this.handleMenuItemClick}>
+                {/* <a href="#events" onClick={this.handleMenuItemClick}>
                   Events
-                </a>
+                </a> */}
+                <Link to="events" onClick={this.handleMenuItemClick} smooth={true} duration={900}>
+                  Events
+                </Link>
+              </li>
+              <li className="header__elem">
+                <Link to="contacts" onClick={this.handleMenuItemClick} smooth={true} duration={900}>
+                    Contacts
+                </Link>
               </li>
             </ul>
           </nav>
